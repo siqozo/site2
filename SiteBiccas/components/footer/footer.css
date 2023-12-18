@@ -1,0 +1,127 @@
+@import url('footer-information/footer-information.css');
+@import url('mail-field/mail-field.css');
+
+.footer {
+  padding-bottom: 120px;
+  font-size: var(--text-size-3);
+  line-height: var(--text-height-large);
+  background-color: var(--color-dark-blue);
+}
+
+.footer__product-container {
+  margin-bottom: 50px;
+}
+
+.footer__product {
+  max-width: 410px;
+}
+
+.footer__product-title {
+  width: 100%;
+  max-width: 160px;
+  margin-bottom: 20px;
+}
+
+.footer__link-started {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--color-grey);
+  transition: opacity ease-in 0.2s;
+}
+
+.footer__link-started:hover {
+  opacity: 0.7;
+}
+
+.footer__information-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__copyright {
+  font-weight: var(--text-weight-medium);
+  line-height: var(--text-height-large);
+  color: var(--color-white);
+}
+
+.footer__copyright-information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__copyright-link {
+  color: var(--color-white);
+}
+
+.footer__copyright-link:hover {
+  color: var(--color-grey);
+  transition: opacity ease-in 0.2s;
+}
+
+.footer__point {
+  width: 4px;
+  height: 4px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: var(--color-grey);
+}
+
+@media screen and (max-width: 1279px) {
+  .footer {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    font-size: var(--text-size-2);
+  }
+
+  .footer__product {
+    margin-bottom: 40px;
+  }
+
+  .footer__product-container {
+    margin-bottom: 40px;
+  }
+
+  .footer__product-title {
+    max-width: 77px;
+  }
+
+  .footer__copyright-container-title {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    padding-top: 10px;
+    background-color: var(--color-dark-grey);
+  }
+
+  .footer__information-container {
+    flex-direction: column;
+    row-gap: 60px;
+  }
+
+  .footer__product-title {
+    max-width: 160px;
+  }
+
+  .footer__copyright-container-title {
+    margin-bottom: 40px;
+  }
+
+  .footer__copyright-information {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .footer__copyright-link:first-child {
+    margin-bottom: 10px;
+  }
+
+  .footer__point {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}

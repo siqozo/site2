@@ -1,0 +1,38 @@
+.service-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  row-gap: 24px;
+  padding: 0;
+}
+
+.service-list_wrap_nowrap .service-list__item {
+  white-space: nowrap;
+}
+
+.service-list__item {
+  padding-left: 38px;
+  font-weight: var(--text-weight-medium);
+  font-size: var(--text-size-3);
+  line-height: var(--text-height-large);
+  color: var(--color-black-ligth);
+  background: url("../../../assets/images/plans/plans-flag-list.svg") no-repeat 0 center;
+}
+
+@media screen and (max-width: 1279px) {
+  .service-list__item {
+    font-size: var(--text-size-2);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .service-list {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .service-list__item {
+    padding-left: 50px;
+  }
+}

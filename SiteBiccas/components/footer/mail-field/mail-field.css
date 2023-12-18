@@ -1,0 +1,43 @@
+.mail-field {
+  height: 56px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid var(--color-grey);
+  border-radius: 70px;
+  padding-left: 20px;
+  padding-right: 8px;
+}
+
+.mail-field:focus-within {
+  border-color: var(--primary-color);
+}
+
+.mail-field__input {
+  font-size: var(--text-size-medium);
+  line-height: var(--text-height-large);
+  color: var(--color-grey);
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.mail-field__input::placeholder {
+  color: var(--color-grey);
+}
+
+.mail-field__button {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-color);
+  border-radius: 50%;
+  border: none;
+  transition: background-color ease-in 0.2s;
+}
+
+.mail-field__button:hover {
+  background-color: var(--primary-color-opacity);
+}

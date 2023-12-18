@@ -1,0 +1,163 @@
+/*TODO пересмотреть реализацию компонента https://incodewetrust.kaiten.ru/space/143454/card/10668504*/
+.switch {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+.switch__label {
+  padding: 15px 40px;
+  cursor: pointer;
+  transition: transform .125s ease-in-out;
+  font-weight: var(--text-weight-medium);
+  font-size: var(--text-size-3);
+  line-height: var(--text-height-large);
+  color: var(--color-black-ligth);
+  z-index: 1;
+}
+
+.switch__input {
+  display: none;
+}
+
+.switch__blob {
+  width: 50%;
+  position: absolute;
+  align-self: center;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  transition: transform .15s ease;
+  border-radius: 50px;
+}
+
+.switch__input-s1 ~ .switch__blob {
+  transform-origin: right center;
+}
+
+.switch__input-s2 ~ .switch__blob {
+  transform-origin: left center;
+}
+
+.switch__input:checked ~ .switch__blob,
+.switch__input:checked:hover ~ .switch__blob {
+  border-bottom: 60px solid var(--primary-color);
+}
+
+.switch__input-s2:checked ~ .switch__blob {
+  transform: translateX(100%);
+}
+
+.switch__input-s1:checked ~ .switch__blob {
+  transform: translateX(0);
+}
+
+/* логика которую я не могу быстро пофиксить, закоменчу, удалять не буду */
+
+/*.switch__input:hover~.switch__blob {*/
+/*  border-bottom: 60px solid var(--primary-color-ultralight);*/
+/*}*/
+
+/*.switch__input-s1:hover ~ .switch__blob {*/
+/*  animation-name: stretchyRev;*/
+/*}*/
+
+/*.switch__input-s2:hover ~ .switch__blob {*/
+/*  animation-name: stretchy;*/
+/*}*/
+
+/*.switch__input-s1:not(:hover):checked ~ .switch__label[for=s1],*/
+/*.switch__input-s2:not(:hover):checked ~ .switch__label[for=s2],*/
+/*.switch__input-s1:hover:checked ~ .switch__label[for=s1],*/
+/*.switch__input-s2:hover:checked ~ .switch__label[for=s2],*/
+/*.switch__input-s1:hover:not(:checked) ~ .switch__label[for=s1],*/
+/*.switch__input-s2:hover:not(:checked) ~ .switch__label[for=s2] {*/
+/*  color: var(--color-white);*/
+/*}*/
+
+/*.switch__input-s1:not(:hover):not(:checked) ~ .switch__label[for=s1],*/
+/*.switch__input-s2:not(:hover):not(:checked) ~ .switch__label[for=s2],*/
+/*.switch__input-s1:hover:not(:checked) ~ .switch__label[for=s2],*/
+/*.switch__input-s2:hover:not(:checked) ~ .switch__label[for=s1] {*/
+/*  color: var(--color-black);*/
+/*}*/
+
+.switch__input-s1:checked ~ .switch__label[for=s1],
+.switch__input-s2:checked ~ .switch__label[for=s2] {
+  color: var(--color-white);
+}
+
+.switch__input-s1:not(:checked) ~ .switch__label[for=s1],
+.switch__input-s2:not(:checked) ~ .switch__label[for=s2] {
+  color: var(--color-black);
+}
+
+.switch__input-s1:hover:not(:checked) ~ .switch__label[for=s1],
+.switch__input-s2:hover:not(:checked) ~ .switch__label[for=s2] {
+  color: rgba(0, 0, 0, .7);
+}
+
+@keyframes stretchy {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes stretchyRev {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .switch {
+    flex-direction: column;
+  }
+
+  .switch__blob {
+    width: 290px;
+  }
+
+  .switch__label {
+    text-align: center;
+    align-self: center;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .switch__input-s2:checked ~ .switch__blob {
+    transform: translateY(100%);
+  }
+
+  .switch__input-s1:checked ~ .switch__blob {
+    transform: translateY(0);
+  }
+
+  @keyframes stretchy {
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(100%);
+    }
+  }
+
+  @keyframes stretchyRev {
+    0% {
+      transform: translateY(100%);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+}

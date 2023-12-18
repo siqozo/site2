@@ -1,0 +1,30 @@
+.main {
+  width: 100%;
+  padding-top: 80px;
+}
+
+.main__section:not(:last-of-type) {
+  margin-bottom: 150px;
+}
+
+@media screen and (max-width: 1919px) {
+  .main {
+    padding-top: 40px;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .main {
+    padding-top: 70px;
+  }
+
+  .main__section:not(:last-of-type) {
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    padding-top: 40px;
+  }
+}

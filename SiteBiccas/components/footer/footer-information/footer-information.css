@@ -1,0 +1,32 @@
+.footer-information {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--text-size-3);
+  line-height: var(--text-height-medium);
+}
+
+.footer-information__title {
+  margin-bottom: 20px;
+  color: var(--color-white);
+}
+
+.footer-information__item:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.footer-information__item-link {
+  display: block;
+  color: var(--color-grey);
+  transition: opacity ease-in 0.2s;
+}
+
+.footer-information__item-link:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-information {
+    font-size: var(--text-size-2);
+    line-height: var(--text-height-small);
+  }
+}

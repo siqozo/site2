@@ -1,0 +1,92 @@
+@import url("fonts.css");
+@import url("reset.css");
+@import url("bootstrap-grid.css");
+@import url("../components/ui-kit/ui-kit.css");
+@import url("blocks.css");
+@import url("main.css");
+
+:root {
+  /* colors */
+  --primary-color:  #54BD95;
+  --primary-color-light:  #6BC2A1;
+  --primary-color-ultralight:  #85DAB9;
+  --primary-color-light-opacity:  rgba(107, 194, 161, .3);
+  --primary-color-opacity: rgba(84, 189, 149, .7);
+
+  --color-grey: #A6A6A6;
+  --color-ligth-grey: #F8F8FA;
+  --color-extraLigth-grey: #F9F8FE;
+  --color-dark-grey: #222938;
+  --color-dark-blue: #161C28;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-white-grey: #F9FAFB;
+  --color-black-ligth: #191A15;
+  --color-black-ligth-opacity: rgba(0, 0, 0, 0.05);
+
+  /* font weight */
+  --text-weight-medium: 500;
+  --text-weight-semibold: 600;
+  --text-weight-bold: 700;
+
+  /* font height */
+  --title-height-1: 90px;
+  --title-height-2: 60px;
+  --title-height-3: 48px;
+  --title-height-4: 36px;
+  --title-height-5: 34px;
+  --title-height-6: 72px;
+  --text-height-large: 30px;
+  --text-height-medium-2: 24px;
+  --text-height-medium: 22px;
+  --text-height-small: 19px;
+  --text-height-extraSmall: 17px;
+
+  /* font size */
+  --title-size-1: 80px;
+  --title-size-2: 50px;
+  --title-size-3: 40px;
+  --title-size-4: 30px;
+  --title-size-5: 28px;
+  --title-size-6: 24px;
+  --text-size-3: 18px;
+  --text-size-2: 16px;
+  --text-size-1: 14px;
+}
+
+.body {
+  font-family: 'Inter', Arial, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+.body_fullscreen {
+  overflow: hidden;
+}
+
+.layout {
+  padding-top: 40px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1919px) {
+  .layout {
+    padding-top: 50px;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .layout {
+    padding-top: 23px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .layout {
+    padding-top: 16px;
+  }
+}
